@@ -1,0 +1,146 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+
+
+}
+
+body{
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  background-color: #4e73df;
+
+}
+
+img{
+  margin-left: 190px;
+  margin-bottom: 25px;
+  width: 100px;
+}
+
+
+.contenedor{
+  max-width: 500px;
+  width: 90%;
+  margin: 150px auto;
+
+}
+fieldset{
+  background-color: #fff;
+  border-radius: .35rem;
+}
+
+
+
+.border{
+  border: none;
+  margin-bottom: 5px;
+  border-top: 10px solid #1a2e6b;
+  background: none;
+  color: none;
+  width: 564px;
+}
+
+.formulario{
+  width: 560px;
+  background: transparent;
+  padding: 30px;
+  margin-bottom: 30px;
+
+}
+
+
+.formulario .from-group{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="password"],
+.formulario input[type="hidden"]{
+
+  border: 1px solid #9ea0a0;
+  background: #fff;
+  margin-left: 12px;
+  margin-bottom: 15px;
+  padding: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  line-height: 18px;
+  vertical-align: top;
+  width: 440px;
+}
+
+.formulario input[type="submit"]{
+
+ width: 200px;
+ margin-left: 150px;
+ margin-top: 30px;
+ background: none;
+ border: 1px solid #4e73df;
+ color:#4e73df;
+ padding: 15px 5px;
+ cursor: pointer;
+ font-size: 16px;
+ border-radius: 3px;
+}
+
+.formulario input[type="submit"]:hover{
+
+   background: #4e73df;
+   color: #fff;
+}
+
+
+.formulario .icono{
+padding-top: 20px;
+
+  text-align: center;
+  width: 48px;
+  height: 55px;
+  max-height: 70px;
+  font-size: 18px;
+  line-height: 18px;
+  background: #c8c8c8;
+  display: inline-block;
+  color:#6b6b6b;
+  vertical-align: top;
+}
+
+.formulario .icono .izquierda{
+
+  margin-right: 4px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius:3px 0 0 3px;
+  -ms-border-radius:3px 0 0 3px;
+  -o-border-radius:3px 0 0 3px;
+  border-radius:3px 0 0 3px;
+}
+
+.formulario .usuario,
+.formulario .password{
+  width: calc(100%-52px);
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius:0 3px 3px 0;
+  -ms-border-radius:0 3px 3px 0;
+  -o-border-radius:0 3px 3px 0;
+  border-radius:0 3px 3px 0;
+
+}
+
+.formulario .password_btn{
+  width: calc(100%-105px);
+}
+
+.formulario .error ul{
+  padding: 0 15px;
+}
+
+.formulario .error ul li{
+  margin-bottom: 10px;
+}
+
+
