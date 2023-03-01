@@ -56,9 +56,9 @@
                 <td><?php echo $dat['NOMBRE']; ?></td>
                 <td><?php echo $dat['CLAVE']; ?></td>
                 <td>
-                    <form action="" method="POST">
-                        <button class="btn btn-primary" type="submit" value="<?php ?>" name="btnActualizar">EDITAR</button>
-                        <button class="btn btn-danger" type="submit" value="<?php ?>" name="btnActualizar" >ELIMINAR</button>
+                    <form action="eliminarConductor.php" method="POST">
+                        <button class="btn btn-primary" type="submit" value="<?php echo $dat['ID']; ?>" name="btnActualizar" disabled>EDITAR</button>
+                        <button class="btn btn-danger" type="submit" value="<?php echo $dat['ID']; ?>" name="btnEliminar" >ELIMINAR</button>
                     </form>
                 </td>
             </tr>

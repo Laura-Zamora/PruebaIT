@@ -7,7 +7,8 @@
     $SQL = "SELECT R.ID AS REGISTRO,CONCAT(CONCAT(C.ID,' - '),C.NOMBRE) AS CONDUCTOR,CONCAT(CONCAT(U.ID,' - '),U.NOMBRE_RUTA) AS RUTA,R.HORAINICIO AS HORAI,R.HORAFINAL AS HORAF
     FROM registro R INNER JOIN conductores C ON R.IDCONDUCTOR = C.ID
     INNER JOIN rutas U ON R.IDRUTA = U.ID
-    WHERE C.ID = $_SESSION[usuario]";
+    WHERE C.ID = $_SESSION[usuario]
+    ORDER BY R.HORAFINAL ASC";
 
     $resultado = $conexion->prepare($SQL);
     $resultado->execute();
@@ -69,40 +70,40 @@
     <br>
 <div class="container">
 
-<table class="table">
-  <thead>
-        <tr>
-        <th scope="col">N REGISTRO</th>
-        <th scope="col">CONDUCTOR</th>
-        <th scope="col">RUTA</th>
-        <th scope="col">HORA INICIO</th>
-        <th scope="col">HORA FINAL</th>
-        <th scope="col">ACCIONES</th>
+  <table class="table" >
+    <thead>
+          <tr>
+          <th scope="col">N REGISTRO</th>
+          <th scope="col">CONDUCTOR</th>
+          <th scope="col">RUTA</th>
+          <th scope="col">HORA INICIO</th>
+          <th scope="col">HORA FINAL</th>
+          <th scope="col">ACCIONES</th>
 
-        </tr>
-  </thead>
-  <tbody>
-        <?php
-            foreach($data as $dat) {
-        ?>
-        <tr>
-        <th scope="row"><?php echo $dat['REGISTRO']; ?></th>
-        <td><?php echo $dat['CONDUCTOR']; ?></td>
-        <td><?php echo $dat['RUTA']; ?></td>
-        <td><?php echo $dat['HORAI']; ?></td>
-        <td><?php echo $dat['HORAF']; ?></td>
-        <td>
-            <form action="actualizaTiempoSalida.php" method="POST">
-                <button class="btn btn-primary" type="submit" value="<?php echo $dat['REGISTRO'];?>" name="btnActualizar" <?php if ($dat['HORAI'] != NULL && $dat['HORAF']){ echo "disabled";};?>>Fin ruta</button>
-            </form>
-        </td>
-        </tr>
+          </tr>
+    </thead>
+    <tbody>
+          <?php
+              foreach($data as $dat) {
+          ?>
+          <tr>
+          <th scope="row"><?php echo $dat['REGISTRO']; ?></th>
+          <td><?php echo $dat['CONDUCTOR']; ?></td>
+          <td><?php echo $dat['RUTA']; ?></td>
+          <td><?php echo $dat['HORAI']; ?></td>
+          <td><?php echo $dat['HORAF']; ?></td>
+          <td>
+              <form action="actualizaTiempoSalida.php" method="POST">
+                  <button class="btn btn-primary" type="submit" value="<?php echo $dat['REGISTRO'];?>" name="btnActualizar" <?php if ($dat['HORAI'] != NULL && $dat['HORAF']){ echo "disabled";};?>>Fin ruta</button>
+              </form>
+          </td>
+          </tr>
 
-        <?php
-            };
-        ?>
-  </tbody>
-</table>
+          <?php
+              };
+          ?>
+    </tbody>
+  </table>
 </div>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
