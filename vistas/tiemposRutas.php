@@ -25,7 +25,7 @@
 
 
 <div class="container">
-    <h1>Informacion Usuario </h1>
+    <h1>Informacion Rutas </h1>
 </div>
 <div class="container">
         <div class="row">

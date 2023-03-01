@@ -63,16 +63,13 @@
             let boton = document.getElementById("btnGuardarC");
 
             if (valorCedula.length == 0) {
-                    alert("Por favor digitar cedula");
                     boton.disabled = true;
             }
 
             if (valorNombre.length == 0) {
-                alert("Por favor digitar nombre");
                 boton.disabled = true;
             }
             if (valorClave.length == 0) {
-                alert("Por favor digitar clave");
                 boton.disabled = true;
             }
 

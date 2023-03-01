@@ -72,13 +72,13 @@
                     echo "</li>";
                     echo "<li class='nav-item'>";
                         echo "<a class='nav-link' href='http://localhost/PruebaIT/vistas/crudRutas.php'>";
-                        echo "<i class='bi bi-person-fill'></i>";
+                        echo "<i class='bi bi-signpost-2'></i>";
                         echo "<span>RUTAS</span></a>";
                     echo "</li>";
                 } else {
                     echo "<li class='nav-item'>";
                         echo "<a class='nav-link' href='http://localhost/PruebaIT/vistas/tiemposRutas.php'>";
-                        echo "<i class='bi bi-person-fill'></i>";
+                        echo "<i class='bi bi-signpost-2'></i>";
                         echo "<span>RUTAS</span></a>";
                     echo "</li>";
                 }
@@ -96,14 +96,14 @@
 
                     echo "<li class='nav-item'>";
                         echo "<a class='nav-link' href='#'>";
-                        echo "<i class='bi bi-person-fill'></i>";
+                        echo "<i class='bi bi-file-earmark-text-fill'></i>";
                         echo "<span>REPORTE RUTAS</span></a>";
                     echo "</li>";
 
                 } else {
                     echo "<li class='nav-item'>";
                         echo "<a class='nav-link' href='http://localhost/PruebaIT/vistas/promedioRutas.php'>";
-                        echo "<i class='bi bi-person-fill'></i>";
+                        echo "<i class='bi bi-file-earmark-text-fill'></i>";
                         echo "<span>PROMEDIO RUTAS</span></a>";
                     echo "</li>";
                 }

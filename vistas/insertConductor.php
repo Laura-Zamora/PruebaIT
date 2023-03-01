@@ -4,7 +4,6 @@
 
 
     if (!empty($_POST)) {
-        $valorRuta=$_POST['ruta'];
 
         $valorCedula=$_POST['cedulaC'];
         $valorNombre=$_POST['nombreC'];
