@@ -62,24 +62,33 @@
             let valorClave= document.getElementById("txtContrasenaC").value;
             let boton = document.getElementById("btnGuardarC");
 
+            let val = 0;
+
             if (valorCedula.length == 0) {
-                    boton.disabled = true;
+                val++;
             }
 
             if (valorNombre.length == 0) {
-                boton.disabled = true;
+                val++;
             }
             if (valorClave.length == 0) {
-                boton.disabled = true;
+                val++;
             }
 
-            if (valorCedula.length > 0 && valorNombre.length > 0 && valorClave.length > 0) {
-                boton.disabled = false;
+            if (val == 0) {
+                document.getElementById("btnGuardarC").disabled = false;
+            } else {
+                document.getElementById("btnGuardarC").disabled = true;
             }
         }
-        
+
+        document.getElementById("txtCedulaC").addEventListener("keyup",validarCampos);
+        document.getElementById("txtNombreC").addEventListener("keyup",validarCampos);
+        document.getElementById("txtContrasenaC").addEventListener("keyup",validarCampos);
+
 
     </script>
+
 
 </body>
 

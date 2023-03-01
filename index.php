@@ -71,13 +71,13 @@
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="formulario" name="login" >
                 <img src="img/transporte-publico.png" alt="">
                 <div class="form-group">
-                <i class= "icono izquierda fa fa-user"></i><input type="text" name="txtUsuario" class="usuario" placeholder="Cedula" value="">
+                <i class= "icono izquierda fa fa-user"></i><input type="text" name="txtUsuario" id="txtU" class="usuario" placeholder="Cedula">
                 </div>
 
                 <div class="from-group">
-                <i class="icono izquierda fa fa-lock"></i><input type="password" name="txtContrasena" class="password_btn" placeholder="Contraseña" value="">
+                <i class="icono izquierda fa fa-lock"></i><input type="password" name="txtContrasena" id="txtC" class="password_btn" placeholder="Contraseña" >
                 </div>
-                <input type="submit" name="ingresar" value="Ingresar">
+                <input type="submit" name="ingresar" value="Ingresar" id="btnL" class="btnS" disabled>
 
                 <?php if(!empty($errores)):?>
                 <div class="error">
@@ -90,5 +90,40 @@
             </form>
        </fieldset>
     </div>
+
+
+    <script>
+        function validarCamposLogin() {
+            let valorCed = document.getElementById("txtU").value;
+            let valorCla= document.getElementById("txtC").value;
+            let botonC = document.getElementById("btnL");
+            let val = 0;
+
+            if (valorCed.length == 0) {
+                val++;
+            }
+
+            if (valorCla.length == 0) {
+                val++;
+            }
+
+            if (val == 0) {
+                document.getElementById("btnL").disabled = false;
+            } else {
+                document.getElementById("btnL").disabled = true;
+            }
+
+
+
+        }
+
+        document.getElementById("txtU").addEventListener("keyup",validarCamposLogin);
+        document.getElementById("txtC").addEventListener("keyup",validarCamposLogin);
+        /*
+        document.getElementById("btnL").addEventListener("click",()=>{
+        });
+        */
+    </script>
+
   </body>
 </html>

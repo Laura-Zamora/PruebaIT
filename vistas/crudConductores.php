@@ -20,17 +20,17 @@
     <form action="insertConductor.php" method="POST">
     <div class="form-group">
         <label for="exampleInputEmail1">Cedula</label>
-        <input type="text" class="form-control" name="cedulaC" id="txtCedulaC" placeholder="Cedula conductor" onchange="validarCampos()">
+        <input type="text" class="form-control" name="cedulaC" id="txtCedulaC" placeholder="Cedula conductor">
     </div>
     <div class="form-group">
         <label for="exampleInputEmail1">Nombre</label>
-        <input type="text" class="form-control" name="nombreC" id="txtNombreC" placeholder="Nombre conductor" onchange="validarCampos()">
+        <input type="text" class="form-control" name="nombreC" id="txtNombreC" placeholder="Nombre conductor">
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Contraseña</label>
-        <input type="password" class="form-control" id="txtContrasenaC" name="contrasenaC" placeholder="Contraseña Conductor" onchange="validarCampos()">
+        <input type="password" class="form-control" id="txtContrasenaC" name="contrasenaC" placeholder="Contraseña Conductor">
     </div>
-    <button type="submit" class="btn btn-primary" id="btnGuardarC" disabled=true>Guardar Conductor</button>
+    <button type="submit" class="btn btn-primary" id="btnGuardarC" disabled>Guardar Conductor</button>
     </form>
 </div>
 
