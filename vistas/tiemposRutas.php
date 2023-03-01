@@ -27,6 +27,38 @@
 <div class="container">
     <h1>Informacion Rutas </h1>
 </div>
+
+<?php
+
+  if(!empty($_SESSION['insert']) == true) {
+    echo'<div class="container">';
+      echo'<div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Inicio de ruta registrado</strong>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>';
+    echo'</div>';
+    $_SESSION['insert'] = false;
+
+  }
+
+  if(!empty($_SESSION['update']) == true) {
+    echo'<div class="container">';
+      echo'<div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Fin de ruta registrado</strong>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>';
+    echo'</div>';
+    $_SESSION['update'] = false;
+  }
+
+
+?>
+
+
 <div class="container">
         <div class="row">
             <div class="col-lg-12">

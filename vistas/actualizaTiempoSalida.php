@@ -11,8 +11,9 @@
         $UP->bindParam(':ID',$ID);
         $ejec=$UP->execute();
         if($ejec){
-            echo'<script language="javascript">alert("Ruta Finalizada");</script>';
+            //echo'<script language="javascript">alert("Ruta Finalizada");</script>';
             header("Refresh:0; url=http://localhost/PruebaIT/vistas/tiemposRutas.php");
+            $_SESSION['update'] = true;
         }else{
             echo'<script language="javascript">alert("Ruta No Modificada");</script>';
         }
