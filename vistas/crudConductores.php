@@ -36,37 +36,40 @@
 
 <br>
 <div class="container">
-
     <table class="table">
-    <thead>
-            <tr>
-                <th scope="col">CEDULA</th>
-                <th scope="col">NOMBRE</th>
-                <th scope="col">CLAVE</th>
-                <th scope="col">ACCIONES</th>
+      <thead>
+              <tr>
+                  <th scope="col">CEDULA</th>
+                  <th scope="col">NOMBRE</th>
+                  <th scope="col">CLAVE</th>
+                  <th scope="col">ACCIONES</th>
 
-            </tr>
-    </thead>
-    <tbody>
-            <?php
-                foreach($data as $dat) {
-            ?>
-            <tr>
-                <th scope="row"><?php echo $dat['ID']; ?></th>
-                <td><?php echo $dat['NOMBRE']; ?></td>
-                <td><?php echo $dat['CLAVE']; ?></td>
-                <td>
-                    <form action="eliminarConductor.php" method="POST">
-                        <button class="btn btn-primary" type="submit" value="<?php echo $dat['ID']; ?>" name="btnActualizar" disabled>EDITAR</button>
-                        <button class="btn btn-danger" type="submit" value="<?php echo $dat['ID']; ?>" name="btnEliminar" >ELIMINAR</button>
-                    </form>
-                </td>
-            </tr>
+              </tr>
+      </thead>
+      <tbody>
+              <?php
+                  foreach($data as $dat) {
+              ?>
+              <tr>
+                  <th scope="row"><?php echo $dat['ID']; ?></th>
+                  <td><?php echo $dat['NOMBRE']; ?></td>
+                  <td><?php echo $dat['CLAVE']; ?></td>
+                  <td>
+                      <form action="crudConductores.php" method="POST">
+                          <button class="btn btn-primary" type="submit" value="<?php echo $dat['ID']; ?>" name="btnActualizar" >EDITAR</button>
+                      </form>
+                  </td>
+                  <td>
+                          <a href="eliminarConductor.php?ID= <?php echo $dat['ID'];?>">
+                              <button class="btn btn-danger" type="submit" name="btnEliminar">ELIMINAR</button>
+                          </a>
+                  </td>
+              </tr>
 
-            <?php
-                };
-            ?>
-    </tbody>
+              <?php
+                  };
+              ?>
+      </tbody>
     </table>
 </div>
 

@@ -3,8 +3,8 @@
     session_start();
     require_once('../pages/conexion.php');
 
-    if (!empty($_POST['btnEliminar'])) {
-        $ID = $_POST['btnEliminar'];
+    if (!empty($_GET['ID'])) {
+        $ID = $_GET['ID'];
         $del = $conexion->prepare(('DELETE FROM conductores WHERE ID=:ID'));
         $del->bindParam(':ID',$ID);
         $ejecutar=$del->execute();
@@ -15,7 +15,7 @@
 
         }else{
             echo'<script language="javascript">alert("Tarea No Eliminada");</script>';
-    }
+        }
     }
 
 ?>

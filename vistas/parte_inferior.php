@@ -90,6 +90,12 @@
     </script>
 
 
+    <script>
+        let botonA = document.getElementById("btnA");
+        botonA.addEventListener('click', () => {
+            $('#exampleModal').modal('show')
+        });
+    </script>
 </body>
 
 </html>
