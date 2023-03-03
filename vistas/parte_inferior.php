@@ -56,6 +56,8 @@
 
     <script>
 
+
+        /*
         function validarCampos() {
             let valorCedula = document.getElementById("txtCedulaC").value;
             let valorNombre = document.getElementById("txtNombreC").value;
@@ -85,16 +87,51 @@
         document.getElementById("txtCedulaC").addEventListener("keyup",validarCampos);
         document.getElementById("txtNombreC").addEventListener("keyup",validarCampos);
         document.getElementById("txtContrasenaC").addEventListener("keyup",validarCampos);
-
+        */
 
     </script>
 
 
     <script>
-        let botonA = document.getElementById("btnA");
-        botonA.addEventListener('click', () => {
-            $('#exampleModal').modal('show')
+        let editaModal = document.getElementById('editaModal');
+        editaModal.addEventListener('shown.bs.modal',event => {
+            let button = event.relatedTarget;
+            let ID = button.getAttribute('data-bs-id')
+
+            let inputId = editaModal.querySelector('.modal-body #ID');
+            let inputNombre = editaModal.querySelector('.modal-body #NOMBRE');
+            let inputClave = editaModal.querySelector('.modal-body #CLAVE');
+
+            let url = "getCondutor.php";
+            let formData = new FormData();
+            formData.append('ID',ID)
+
+            fetch (url, {
+                method: "POST",
+                body:formData
+
+            }).then(response => response.json())
+            .then(data => {
+                inputId.value = data.ID
+                inputNombre.value = data.NOMBRE
+                inputClave.value = data.CLAVE
+
+            }).catch(err => console.log(err))
+
+        })
+    </script>
+
+    <script>
+        /*
+        let formulario = document.getElementById('formulito');
+        let boton = document.getElementById("btnPrue");
+        let inputNom = formulario.querySelector('#txtNombreC');
+
+        boton.addEventListener("click", function(){
+            inputNom.value = "HIII"
         });
+        */
+
     </script>
 </body>
 
